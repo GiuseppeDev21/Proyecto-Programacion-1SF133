@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* Asegurar que el body y html ocupen toda la altura de la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Flex", sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal */
+main {
+    flex: 1;
+    width: 85%;
+    margin: auto;
+}
+
+/* Estilo para todos los títulos h1 */
+h1 {
+    font-weight: lighter;
+}
+
+/* Estilo del encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 60px); /* Ajusta el ancho restando el padding */
+    height: 60px;
+    padding: 30px;
+    margin-bottom: 10px;
+    background: #E8EAED;
+    z-index: 999;
+}
+
+/* Contenedor del logo */
+.logo,
+.navbar_boton {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar_boton {
+    cursor: pointer;
+}
+
+/* Contenedor de los enlaces de navegación */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 28px;
+    width: 100%;
+}
+
+/* Enlaces de navegación */
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: box-shadow 0.3s ease, font-weight 0.3s ease;
+    opacity: 1; /* Opacidad por defecto */
+    position: relative; /* Añadido para controlar la sombra */
+}
+
+/* Enlace activo */
+.nav-links a:focus, .nav-links a:hover {
+    font-weight: bold;
+}
+
+/* Efecto de sombra en el texto del enlace */
+.nav-links a:focus::before, .nav-links a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Ajusta según necesites */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Grosor de la sombra */
+    background-color: #BE1C2D; /* Color de la sombra */
+    transition: height 0.3s ease; /* Transición de la altura */
+}
+
+/* Reduce la opacidad de los enlaces inactivos */
+.nav-links a:not(:focus):not(:hover) {
+    opacity: 0.5;
+}
+
+/* Contenedor para la parte superior */
+.upper-side-container {
+    padding-top: 30px;
+}
+
+/* Contenedor de la parte superior con el título y el SVG */
+.upper-side-title {
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+/* Ajuste de margen para el título */
+#Empleados-title {
+    font-size: 60px;
+    margin-left: 10px; /* Ajusta el valor según sea necesario */
+}
+
+/* Utilidades en la parte superior */
+.upper-side-utilities {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.Agregar {
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 5 px;
+    padding-bottom: 5 px;
+}
+
+#busqueda {
+    width: 400px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Barra de búsqueda dentro de las utilidades en la parte superior */
+.upper-side-utilities .utilities-searchbar {
+    display: flex;
+    background-color: #E8EAED;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    cursor: text;
+}
+
+/* Campo de búsqueda */
+.upper-side-utilities #busqueda {
+    padding: 8px;
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+/* Botón de búsqueda */
+.upper-side-utilities span {
+    display: flex;
+    justify-content: center;
+    background-color: #BE1C2D;
+    width: 200px;
+    border-radius: 25px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/* Estilo del botón dentro del span */
+.upper-side-utilities span button {
+    font-weight: bold;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo de la tabla de datos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Línea gruesa */
+#bold-line {
+    margin-bottom: 0;
+}
+
+/* Estilo de las celdas de la tabla */
+th, td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo de los encabezados de la tabla */
+th {
+    padding: 20px;
+}
+
+/* Estilo del cuerpo de la tabla */
+tbody {
+    width: 100%;
+    display: table-row-group;
+}
+
+/* Estilo de las filas de la tabla */
+tr {
+    width: 100%;
+}
+
+/* Estilo de las celdas de la tabla para evitar desbordamiento */
+td {
+    overflow: hidden;
+}
+
+/* Estilo de las filas al pasar el ratón por encima */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Contenedor de paginación */
+.pagination-container {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Estilo de la paginación */
+.pagination {
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pagination button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Onda roja en el pie de página */
+.footer-container {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+    margin-top: auto;
+}
+
+/* Contenedor de la onda roja */
+.red-wave-container {
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    left: 0;
+    bottom: 0;
+}
+
+.red-wave-container svg {
+    width: 100%;
+    height: auto;
+}

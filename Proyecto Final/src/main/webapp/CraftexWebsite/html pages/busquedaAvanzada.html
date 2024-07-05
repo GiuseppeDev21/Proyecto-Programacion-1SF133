@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma de la página como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <title>Búsqueda Avanzada</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="../css/busquedaAvanzada.css"> <!-- Vincula la hoja de estilos CSS -->
+</head>
+<body>
+    <header class="header">
+        <!-- El encabezado de la página (vacío en este código) -->
+    </header>
+    <main>
+        <div class="upper-side-container">
+            <div class="upper-side">
+                <div class="upper-side-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="50px" viewBox="0 0 24 24" fill="none">
+                        <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z" fill="#0F0F0F"/>
+                    </svg>
+                    <h1 id="Clientes-title">Busqueda Avanzada</h1> <!-- Título principal de la sección superior -->
+                </div>
+                <div class="upper-side-client">
+                    <h3>Cliente: María Povaz</h3> <!-- Información del cliente -->
+                </div>
+            </div>
+        </div>
+    
+        <table>
+            <hr id="bold-line"> <!-- Línea horizontal estilizada -->
+            <thead>
+                <tr>
+                    <th>Código</th> <!-- Encabezado de la columna para el código -->
+                    <th>Cliente</th> <!-- Encabezado de la columna para el cliente -->
+                    <th>Fecha</th> <!-- Encabezado de la columna para la fecha -->
+                    <th>Responsable</th> <!-- Encabezado de la columna para el responsable -->
+                    <th>Total</th> <!-- Encabezado de la columna para el total -->
+                    <th></th> <!-- Columna vacía para posibles acciones -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9001</td> <!-- Código de la transacción -->
+                    <td>María Povaz</td> <!-- Nombre del cliente -->
+                    <td>15/03/2023</td> <!-- Fecha de la transacción -->
+                    <td>Alan Arias</td> <!-- Responsable de la transacción -->
+                    <td>$514.06</td> <!-- Total de la transacción -->
+                    <td style="color:red">ver</td> <!-- Acción de ver más detalles -->
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination-container"> 
+            <div class="pagination">
+                <button onclick="mostrarPaginaAnterior()">
+                    <!-- Botón para mostrar la página anterior en la paginación -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="auto" viewBox="0 0 24 24" fill="none">
+                        <path d="M14.9991 19L9.83911 14C9.56672 13.7429 9.34974 13.433 9.20142 13.0891C9.0531 12.7452 8.97656 12.3745 8.97656 12C8.97656 11.6255 9.0531 11.2548 9.20142 10.9109C9.34974 10.567 9.56672 10.2571 9.83911 10L14.9991 5" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div id="contenedor-paginas"></div> <!-- Contenedor para los números de página -->
+                <button onclick="mostrarPaginaSiguiente()">
+                    <!-- Botón para mostrar la página siguiente en la paginación -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="auto" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 5L14.15 10C14.4237 10.2563 14.6419 10.5659 14.791 10.9099C14.9402 11.2539 15.0171 11.625 15.0171 12C15.0171 12.375 14.9402 12.7458 14.791 13.0898C14.6419 13.4339 14.4237 13.7437 14.15 14L9 19" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-container">
+        <!-- Contenedor del pie de página -->
+        <svg class="red-wave-container" width="100%" height="110" viewBox="0 0 100% 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="red-wave" d="M0 3.12128C0 3.12128 119 112.211 719 47.3469C1319 -17.5174 1500 3.12128 1500 3.12128V110H0V3.12128Z" fill="#BE1C2D"/>
+        </svg>
+    </footer>
+    <script src="../js/clientes.js"></script> <!-- Vincula el archivo JavaScript -->
+</body>
+</html>

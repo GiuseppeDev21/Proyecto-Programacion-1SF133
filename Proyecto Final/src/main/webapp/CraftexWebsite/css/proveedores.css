@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: "Roboto Flex", sans-serif;
+            background-color: #f4f4f4;
+        }
+        main {
+            flex: 1;
+            width: 85%;
+            margin: auto;
+        }
+        h1 {
+            font-weight: lighter;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            width: calc(100% - 60px); /* Ajusta el ancho restando el padding */
+            height: 60px;
+            padding: 30px;
+            margin-bottom: 10px;
+            background: #E8EAED;
+            z-index: 999;
+        }
+        .logo,
+        .navbar_boton {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .navbar_boton {
+            cursor: pointer;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 28px;
+            width: 100%;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            transition: box-shadow 0.3s ease, font-weight 0.3s ease;
+            opacity: 1;
+            position: relative;
+        }
+        .nav-links a:focus, .nav-links a:hover {
+            font-weight: bold;
+        }
+        .nav-links a:focus::before, .nav-links a:hover::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #BE1C2D;
+            transition: height 0.3s ease;
+        }
+        .nav-links a:not(:focus):not(:hover) {
+            opacity: 0.5;
+        }
+        .upper-side-container {
+            padding-top: 30px;
+        }
+        .upper-side-title {
+            display: flex;
+            align-items: center;
+            height: auto;
+        }
+        #Proveedores-title {
+            font-size: 60px;
+            margin-left: 10px;
+        }
+        .upper-side-utilities {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 3%;
+        }
+        .Agregar {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        #busqueda {
+            width: 400px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .upper-side-utilities .utilities-searchbar {
+            display: flex;
+            background-color: #E8EAED;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 30px;
+            cursor: text;
+        }
+        .upper-side-utilities #busqueda {
+            padding: 8px;
+            display: block;
+            background: none;
+            outline: none;
+            border: none;
+        }
+        .upper-side-utilities span {
+            display: flex;
+            justify-content: center;
+            background-color: #BE1C2D;
+            width: 200px;
+            border-radius: 25px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .upper-side-utilities span button {
+            font-weight: bold;
+            background: none;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        #bold-line {
+            margin-bottom: 0;
+        }
+        th, td {
+            text-align: center;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            padding: 20px;
+        }
+        tbody {
+            width: 100%;
+            display: table-row-group;
+        }
+        tr {
+            width: 100%;
+        }
+        td {
+            overflow: hidden;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .pagination-container {
+            padding-top: 3%;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .pagination {
+            display: flex;
+            width: 15%;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .pagination button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .footer-container {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            margin-top: auto;
+        }
+        .red-wave-container {
+            position: absolute;
+            width: 100%;
+            height: 110px;
+            left: 0;
+            bottom: 0;
+        }
+        .red-wave-container svg {
+            width: 100%;
+            height: auto;
+        }

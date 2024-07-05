@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* Estilo base para el cuerpo del documento */
+body {
+    font-family: "Roboto Flex", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Definición de altura del documento HTML para llenar la pantalla */
+html {
+    height: 100vh;
+}
+
+/* Estilo principal para el contenido principal */
+main {
+    width: 85%;
+    margin: auto;
+}
+
+/* Estilo para todos los títulos h1 */
+h1 {
+    font-weight: lighter;
+}
+
+/* Estilo del encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 60px); /* Ajusta el ancho restando el padding */
+    height: 60px;
+    padding: 30px;
+    margin-bottom: 10px;
+    background: #E8EAED;
+    z-index: 999;
+}
+
+/* Contenedor del logo */
+.logo,
+.navbar_boton {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.navbar_boton{
+    cursor: pointer;
+}
+
+/* Contenedor de los enlaces de navegación */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 28px;
+    width: 100%;
+}
+
+/* Enlaces de navegación */
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: box-shadow 0.3s ease, font-weight 0.3s ease;
+    opacity: 1; /* Opacidad por defecto */
+    position: relative; /* Añadido para controlar la sombra */
+}
+
+/* Enlace activo */
+.nav-links a:focus, .nav-links a:hover {
+    font-weight: bold;
+}
+
+/* Efecto de sombra en el texto del enlace */
+.nav-links a:focus::before, .nav-links a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Ajusta según necesites */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Grosor de la sombra */
+    background-color: #BE1C2D   ; /* Color de la sombra */
+    transition: height 0.3s ease; /* Transición de la altura */
+}
+
+/* Reduce la opacidad de los enlaces inactivos */
+.nav-links a:not(:focus):not(:hover) {
+    opacity: 0.5;
+}
+
+
+/* Contenedor para la parte superior */
+.upper-side-title {
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+/* Ajuste de margen para el título */
+#Clientes-title {
+    font-size: 60px;
+    margin-left: 10px; /* Ajusta el valor según sea necesario */
+}
+
+/* Línea de separación en negrita */
+#bold-line {
+    border-color: #BE1C2D;
+    border-width: 1.5px;
+    margin-bottom: 35px;
+}
+
+#cliente-datos{
+    font-size: 25px;
+}
+.Agregar{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* Estilos para los formularios */
+.forms {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para las filas de los formularios */
+.forms .rows {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para la primera fila de los formularios */
+.forms .rows .row1-forms {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Estilos para la segunda fila de los formularios */
+.forms .rows .row2-forms {
+    display: flex;
+}
+
+/* Estilos para los grupos de formularios */
+.forms .rows .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos específicos para el grupo de formulario "nombre" */
+.forms .rows .form-group#nombre {
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+
+.forms .rows .form-group#nombre label {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.forms .rows .form-group#nombre input {
+    background-color: rgb(223, 223, 223);
+    height: 30px;
+    width: 250px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    cursor: text;
+}
+
+/* Estilos específicos para el grupo de formulario "apellido" */
+.forms .rows .form-group#apellido {
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+
+.forms .rows .form-group#apellido label {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.forms .rows .form-group#apellido input {
+    background-color: rgb(223, 223, 223);
+    height: 30px;
+    width: 250px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    cursor: text;
+}
+
+/* Estilos específicos para el grupo de formulario "cedula" */
+.forms .rows .form-group#cedula {
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+
+.forms .rows .form-group#cedula label {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.forms .rows .form-group#cedula input {
+    background-color: rgb(223, 223, 223);
+    height: 30px;
+    width: 250px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    cursor: text;
+}
+
+/* Estilos específicos para el grupo de formulario "correo" */
+.forms .rows .form-group#correo {
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+
+.forms .rows .form-group#correo label {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.forms .rows .form-group#correo input {
+    background-color: rgb(223, 223, 223);
+    height: 30px;
+    width: 290px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    cursor: text;
+}
+
+/* Estilos específicos para el grupo de formulario "telefonoPersonal" */
+.forms .rows .form-group#telefonoPersonal {
+    margin-top: 10px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+
+.forms .rows .form-group#telefonoPersonal label {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.forms .rows .form-group#telefonoPersonal input {
+    background-color: rgb(223, 223, 223);
+    height: 30px;
+    width: 150px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    cursor: text;
+}
+
+/* Estilos específicos para el grupo de formulario "telefonoResidencial" */
+.forms .rows .form-group#telefonoResidencial {
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.forms .rows .form-group#telefonoResidencial label {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.forms .rows .form-group#telefonoResidencial input {
+    background-color: rgb(223, 223, 223);
+    height: 30px;
+    width: 150px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    cursor: text;
+}
+
+/* Estilos específicos para el grupo de formulario "direccion" */
+.forms .rows .form-group#direccion {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.forms .rows .form-group#direccion label {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.forms .rows .form-group#direccion select {
+    background-color: rgb(223, 223, 223);
+    color: #797979;
+    margin-right: 30px;
+    height: 30px;
+    width: 150px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.forms .rows .form-group#direccion input {
+    background-color: rgb(223, 223, 223);
+    margin-right: 30px;
+    height: 30px;
+    width: 150px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    cursor: text;
+}
+
+/* Estilos para las opciones (botones) */
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.options hr#submit {
+    border-width: 0.5px;
+    border-color: #F7302F;
+}
+
+.options span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #BE1C2D;
+    height: 15px;
+    width: 180px;
+    border-radius: 20px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.options span button {
+    font-weight: lighter;
+    font-size: larger;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.options .button-cancel {
+    margin-top: 15px;
+    width: 120px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Establece el tamaño del contenedor del pie de página */
+.footer-container {
+    position: fixed; /* Cambiado a fixed para asegurar que esté siempre al fondo */
+    bottom: 0; /* Fijado en la parte inferior de la ventana */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    height: 110px; /* Altura fija del pie de página */
+    overflow: hidden; /* Evita desbordamientos */
+    z-index: -1; /* Mueve el pie de página detrás de otros elementos */
+}
+
+/* Ajusta el SVG para ocupar toda la pantalla */
+#red-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ajusta el ancho para ocupar toda la pantalla */
+    height: 100%; /* Ajusta la altura para ocupar toda la altura del contenedor */
+    fill: #BE1C2D; /* Color de relleno del SVG */
+}
+

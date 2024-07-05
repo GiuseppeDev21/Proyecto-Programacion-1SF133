@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* Asegurar que el body y html ocupen toda la altura de la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Flex", sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal */
+main {
+    flex: 1;
+    width: 85%;
+    margin: auto;
+}
+
+/* Estilo para todos los títulos h1 */
+h1 {
+    font-weight: lighter;
+}
+
+/* Estilo del encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 60px); /* Ajusta el ancho restando el padding */
+  height: 60px;
+  padding: 30px;
+  margin-bottom: 10px;
+  background: #E8EAED;
+  z-index: 999;
+}
+
+/* Contenedor del logo */
+.logo,
+.navbar_boton {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.navbar_boton {
+    cursor: pointer;
+}
+
+/* Contenedor de los enlaces de navegación */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 28px;
+    width: 100%;
+}
+
+/* Enlaces de navegación */
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: box-shadow 0.3s ease, font-weight 0.3s ease;
+    opacity: 1; /* Opacidad por defecto */
+    position: relative; /* Añadido para controlar la sombra */
+}
+
+/* Enlace activo */
+.nav-links a:focus,
+.nav-links a:hover {
+    font-weight: bold;
+}
+
+/* Efecto de sombra en el texto del enlace */
+.nav-links a:focus::before,
+.nav-links a:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Ajusta según necesites */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Grosor de la sombra */
+    background-color: #BE1C2D; /* Color de la sombra */
+    transition: height 0.3s ease; /* Transición de la altura */
+}
+
+/* Reduce la opacidad de los enlaces inactivos */
+.nav-links a:not(:focus):not(:hover) {
+    opacity: 0.5;
+}
+
+/* Contenedor para la parte superior */
+.upper-side-title {
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+/* Ajuste de margen para el título */
+#Ordenes-title {
+    font-size: 60px;
+    margin-left: 10px; /* Ajusta el valor según sea necesario */
+}
+
+
+
+  .factura-contenedor {
+    width: 610px;
+    height: 681px;
+    background: url("../images/v346_2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 320px;
+    left: 371px;
+    overflow: hidden;
+    padding-bottom: 3%;
+
+  }
+  
+  .factura-contenedor-fondo {
+    width: 610px;
+    height: 681px;
+    background: rgba(232,234,237,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .factura-contenedor-texto {
+    width: 553px;
+    height: 614px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 22px;
+    left: 29px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.25);
+  }
+  .factura-ID {
+    width: 147px;
+    color: rgba(190,28,45,1);
+    position: absolute;
+    top: 371px;
+    left: 400px;
+    font-family: Roboto Flex;
+    font-weight: ExtraBold;
+    font-size: 28px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-cantidad-producto {
+    width: 147px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 550px;
+    left: 406px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-cliente {
+    width: 181px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 374px;
+    left: 751px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-empleado {
+    width: 191px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 408px;
+    left: 736px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-fechacreacion {
+    width: 119px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 408px;
+    left: 420px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: left;
+  }
+  .factura-titulo-cantidad {
+    width: 119px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 502px;
+    left: 420px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-titulo-producto {
+    width: 119px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 502px;
+    left: 601px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-titulo-total-cantidad {
+    width: 119px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 502px;
+    left: 772px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-titulo-subtotal {
+    width: 119px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 692px;
+    left: 661px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-titulo-total {
+    width: 119px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 794px;
+    left: 636px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 32px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-titulo-ITBMS {
+    width: 119px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 731px;
+    left: 660px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-producto-total-cantidad {
+    width: 66px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 550px;
+    left: 802px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: left;
+  }
+  .factura-producto-descripcion {
+    width: 188px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 550px;
+    left: 567px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-subtotal {
+    width: 147px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 690px;
+    left: 761px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-total {
+    width: 147px;
+    color: rgba(52,168,83,1);
+    position: absolute;
+    top: 794px;
+    left: 758px;
+    font-family: Roboto Flex;
+    font-weight: SemiBold;
+    font-size: 32px;
+    opacity: 1;
+    text-align: center;
+  }
+  .factura-ITBMS {
+    width: 147px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 729px;
+    left: 802px;
+    font-family: Roboto Flex;
+    font-weight: Regular;
+    font-size: 18px;
+    opacity: 1;
+    text-align: left;
+  }
+  .factura-lineadivisora {
+    width: 461px;
+    height: 1px;
+    background: rgba(143,143,143,1);
+    opacity: 1;
+    position: absolute;
+    top: 666px;
+    left: 442px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+  }
+  
+
+
+
+/* Estilos para el footer */
+.footer-container {
+    top: 300px;
+    position: relative;
+    width: 100%;
+    height: 150px; /* Ajusta según sea necesario */
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.red-wave-container {
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    left: 0;
+    bottom: 0;
+}
+
+.red-wave-container svg {
+    width: 100%;
+    height: auto;
+}
+
+
